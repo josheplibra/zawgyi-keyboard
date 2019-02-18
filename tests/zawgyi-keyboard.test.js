@@ -16,9 +16,9 @@ var ZawgyiKeyboard = ZawgyiKeyboard || require('../src/zawgyi-keyboard').ZawgyiK
 var KeyEvent = KeyEvent || require('./libs/key-event');
 
 
-// Reset Mousetrap after each test
+// Reset ZawgyiKeyboard after each test
 afterEach(function () {
-  // ZawgyiKeyboard.reset();
+  ZawgyiKeyboard.reset();
 });
 
 describe('wrapping a specific element', function () {
