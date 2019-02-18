@@ -1,35 +1,49 @@
 {
-    "name": "zawgyi-keyboard",
-    "version": "0.0.1",
-    "description": "Simple library for writing zawgyi",
-    "main": "zawgyi-keyboard.js",
-    "directories": {
-        "test": "tests"
-    },
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/josheplibra/zawgyi-keyboard.git"
-    },
-    "keywords": [
-        "zawgyi",
-        "keyboard",
-        "shortcuts",
-        "events"
-    ],
-    "author": "Joshep Libra",
-    "license": "Apache-2.0 WITH LLVM-exception",
-    "readmeFilename": "README.md",
-    "dependencies": {
-        "mousetrap": "^1.6.2"
-    },
-    "devDependencies": {
-        "chai": "^4.2.0",
-        "grunt": "~1.0.3",
-        "grunt-complexity": "~1.1.0",
-        "jsdom": "^13.1.0",
-        "jsdom-global": "^3.0.2",
-        "mocha": "^5.2.0",
-        "sinon": "^7.2.2"
-    }
+  "name": "zawgyi-keyboard",
+  "version": "0.0.1",
+  "description": "Simple library for writing Zawgyi",
+  "main": "src/zawgyi-keyboard.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha --require @babel/register --reporter=nyan tests/zawgyi-keyboard.test.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/josheplibra/zawgyi-keyboard.git"
+  },
+  "keywords": [
+    "zawgyi",
+    "keyboard",
+    "shortcuts",
+    "events"
+  ],
+  "author": "Joshep Libra",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "mousetrap": "^1.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "grunt": "~1.0.3",
+    "grunt-complexity": "~1.1.0",
+    "jsdom": "^13.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
 }
